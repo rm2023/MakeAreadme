@@ -44,7 +44,13 @@ const questions = [
         type: 'input',
         name: 'Email',
         message: 'What is your Email?',
-    }
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What type of license do you want to use?',
+        choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3-Clause', 'None']
+    },
 ];
 
 // Function to write README file
@@ -61,6 +67,8 @@ function init() {
         .then((data) => {
 // Generate README content based on user input
             const readmeContent = `
+This project is licensed under the ${data.license} license.
+
 # ${data.title}
 
 ## Description
@@ -85,11 +93,11 @@ ${data.Installation}
 
 ${data.Usage}
 
-## contribution
+## Contribution
 
 ${data.Contribution}
 
-## tests
+## Tests
 
 ${data.Tests}
 
@@ -97,13 +105,10 @@ ${data.Tests}
 
 <a href= "https://github.com/${data.Github}">github link</a>
 
-## email
+## Email
 
 you can reach me for additional comments or questions at my email ${data.email}
 
-## License
-
-<!-- add license  here -->
 `;
             // Write README file
             writeToFile('README.md', readmeContent);
