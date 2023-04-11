@@ -77,13 +77,13 @@ ${data.Description}
 
 ## Table of Contents
 
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Contribution](#Contribution)
-- [Tests](#Tests)
-- [Github](#Github)
-- [Email](#Email)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Github](#github)
+- [Email](#email)
 
 ## Installation
 
@@ -107,7 +107,7 @@ ${data.Tests}
 
 ## Email
 
-you can reach me for additional comments or questions at my email ${data.email}
+you can reach me for additional comments or questions at my email ${data.Email}
 
 `;
             // Write README file
